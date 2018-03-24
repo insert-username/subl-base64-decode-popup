@@ -44,5 +44,7 @@ class Base64DecodePopupEventListener(sublime_plugin.EventListener):
             if decoded_bytes_as_utf8 is not None \
             else encoding_details.get_decoded_bytes_as_hex_string()
 
-        view.show_popup('<h3>' + encoding_scheme_name + '</h3>' +
-            '<code>' + display_string + '</code>')
+        view.show_popup(
+            '<h3>' + encoding_scheme_name + '</h3>' +
+            '<code>' + display_string + '</code>',
+            max_width=600)
