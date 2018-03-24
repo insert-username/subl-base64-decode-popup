@@ -11,11 +11,11 @@ else
     exit 1
 fi
 
-base64DecodePopupPackageDir=$packagesDir/base64-decode-popup
+base64DecodePopupPackageDir=$packagesDir/base64_decode_popup
 
 if $(test -d $base64DecodePopupPackageDir)
 then
-    echo "base64-decode-popup package already installed. Removing old version."
+    echo "base64_decode_popup package already installed. Removing old version."
     rm -rf $base64DecodePopupPackageDir
 
     if [ $? -ne 0 ]
@@ -26,7 +26,7 @@ then
 fi
 
 echo "Copying package contents to Package Directory..."
-cp -a . "$packagesDir/base64-decode-popup"
+cp -a . $base64DecodePopupPackageDir
 
 if [ $? -eq 0 ]
 then
