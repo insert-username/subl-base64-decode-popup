@@ -20,3 +20,8 @@ Simply delete the folder you created during the install, or use Package Control:
 `PackageControl: Remove Package` --> `base64-decode-popup`.
 
 # Usage
+Select a base64 encoded string. The resulting decoded string is displayed in a
+popup by the cursor.
+
+## Example
+![using the plugin](https://raw.githubusercontent.com/insert-username/subl-base64-decode-popup/master/example-01.png?token=ALEQbYcGE7t8sxHwUH6K87615zwrMdoOks5av7WtwA%3D%3D)
