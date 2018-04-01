@@ -13,7 +13,7 @@ class Base64EncodingAnalyzerTest(unittest.TestCase):
 
         encoding_details = analysis.get_encoding_details()
 
-        self.assertEquals(encoding_details.get_encoding_scheme_name(), "Base64")
+        self.assertEqual(encoding_details.get_encoding_scheme_name(), "Base64")
 
 if __name__ == "__main__":
     unittest.main()
