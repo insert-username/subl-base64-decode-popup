@@ -26,7 +26,7 @@ then
 fi
 
 echo "Copying package contents to Package Directory..."
-cp -a . $base64DecodePopupPackageDir
+cp -a base64_decode_popup $base64DecodePopupPackageDir
 
 if [ $? -eq 0 ]
 then
