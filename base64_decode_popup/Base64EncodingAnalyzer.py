@@ -1,6 +1,5 @@
 import binascii
 
-from base64_decode_popup import BaseEncodingUtils
 from base64_decode_popup.EncodingAnalysis import EncodingAnalysis
 from base64_decode_popup.EncodingDetails import EncodingDetails
 

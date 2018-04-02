@@ -3,8 +3,9 @@ import base64
 import binascii
 import codecs
 
-from base64_decode_popup import Base64EncodingAnalyzer
-from base64_decode_popup import Base64UrlEncodingAnalyzer
+from base64_decode_popup.Base64EncodingAnalyzer import Base64EncodingAnalyzer
+from base64_decode_popup.EncodingAnalysis import EncodingAnalysis
+from base64_decode_popup.Base64UrlEncodingAnalyzer import Base64UrlEncodingAnalyzer
 
 def analyze(encoded_string):
     """
@@ -16,8 +17,8 @@ def analyze(encoded_string):
         return EncodingAnalysis(None)
 
     analyzers = [
-        Base64EncodingAnalyser(),
-        Base64UrlEncodingAnalyser()
+        Base64EncodingAnalyzer(),
+        Base64UrlEncodingAnalyzer()
     ]
 
     for analyzer in analyzers:

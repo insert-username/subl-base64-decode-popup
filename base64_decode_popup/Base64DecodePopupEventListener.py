@@ -2,7 +2,7 @@ import sys
 import sublime
 import sublime_plugin
 
-from base64_decode_popup import BaseEncodingUtils
+from base64_decode_popup.BaseEncodingUtils import analyze
 
 class Base64DecodePopupEventListener(sublime_plugin.EventListener):
 
@@ -10,7 +10,7 @@ class Base64DecodePopupEventListener(sublime_plugin.EventListener):
     def on_selection_modified(self, view):
         selected_text = Base64DecodePopupEventListener.__get_selected_text(view)
 
-        encoding_analysis = BaseEncodingUtils.analyze(selected_text)
+        encoding_analysis = analyze(selected_text)
 
         if encoding_analysis.has_encoding_details():
             Base64DecodePopupEventListener.__display_encoding_details(
