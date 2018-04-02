@@ -25,3 +25,11 @@ popup by the cursor.
 
 ## Example
 ![using the plugin](https://raw.githubusercontent.com/insert-username/subl-base64-decode-popup/master/example-01.png?token=ALEQbYcGE7t8sxHwUH6K87615zwrMdoOks5av7WtwA%3D%3D)
+
+# Development
+
+## Prerequisites
+Python `3.3.6` or later.
+
+## Test
+Use `./test.sh` to run the unit tests.
