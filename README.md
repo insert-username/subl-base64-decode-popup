@@ -9,8 +9,8 @@ installation can be performed by:
 1. Clone this repo.
 2. Navigate to your package installation directory (You can do this by opening
 sublime text and Navigating to `Preferences` --> `Browse Packages`).
-4. Copy the contents of this repo into a new folder called
-`base64-decode-popup`.
+4. Copy the `base64_decode_popup` directory into the installation
+directory.
 
 Optionally, if you are using Linux, just run `install.sh`, which will do the
 same thing.
