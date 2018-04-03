@@ -49,3 +49,6 @@ Python `3.3.6` or later.
 
 ## Test
 Use `./test.sh` to run the unit tests.
+
+## Contributing
+Use git flow and Semantic Versioning rules for contributions.
