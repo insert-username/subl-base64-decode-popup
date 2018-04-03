@@ -4,7 +4,6 @@ import sublime_plugin
 
 from base64_decode_popup.EncodedStringFilter import EncodedStringFilter
 from base64_decode_popup.Base64EncodingAnalyzer import Base64EncodingAnalyzer
-from base64_decode_popup.Base64UrlEncodingAnalyzer import Base64UrlEncodingAnalyzer
 from base64_decode_popup.AggregateBaseEncodingAnalyzer import AggregateBaseEncodingAnalyzer
 from base64_decode_popup.FilteredBaseEncodingAnalyzer import FilteredBaseEncodingAnalyzer
 from base64_decode_popup.SettingDefaults import SETTING_DEFAULTS
@@ -14,7 +13,7 @@ class Base64DecodePopupEventListener(sublime_plugin.EventListener):
 
 
     def on_selection_modified(self, view):
-        delegates = [ Base64EncodingAnalyzer(), Base64UrlEncodingAnalyzer() ]
+        delegates = [ Base64EncodingAnalyzer(), Base64EncodingAnalyzer(variant="Url") ]
 
         analyzer = FilteredBaseEncodingAnalyzer(
                 AggregateBaseEncodingAnalyzer(delegates), \
@@ -23,7 +22,6 @@ class Base64DecodePopupEventListener(sublime_plugin.EventListener):
         selected_text = Base64DecodePopupEventListener.__get_selected_text(view)
 
         encoding_analysis = analyzer.analyze(selected_text)
-
 
 
         if encoding_analysis.has_encoding_details():
