@@ -5,9 +5,7 @@ import binascii
 import codecs
 
 from base64_decode_popup.EncodingAnalyzer import EncodingAnalyzer
-from base64_decode_popup.Base64EncodingAnalyzer import Base64EncodingAnalyzer
 from base64_decode_popup.EncodingAnalysis import EncodingAnalysis
-from base64_decode_popup.Base64UrlEncodingAnalyzer import Base64UrlEncodingAnalyzer
 
 
 class AggregateBaseEncodingAnalyzer(EncodingAnalyzer):
