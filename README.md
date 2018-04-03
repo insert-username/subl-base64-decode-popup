@@ -26,6 +26,22 @@ popup by the cursor.
 ## Example
 ![using the plugin](https://raw.githubusercontent.com/insert-username/subl-base64-decode-popup/master/example-01.png?token=ALEQbYcGE7t8sxHwUH6K87615zwrMdoOks5av7WtwA%3D%3D)
 
+## Configuration
+The following settings can be used to configure plugin behavior.
+
+```
+"base64_decode_popup": {
+    "min_encoded_string_length_inclusive": 1,
+    "max_encoded_string_length_exclusive": 1000,
+
+    // ignore whitespace-only strings.
+    "encoded_string_ignore_filter_regex" : "^\\s+$",
+
+    // only display strings that are utf8 encoded (may include false-positives).
+    "display_non_utf8_byte_arrays": false
+}
+```
+
 # Development
 
 ## Prerequisites

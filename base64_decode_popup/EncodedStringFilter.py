@@ -1,14 +1,7 @@
-import sys
 import re
-import base64
-import binascii
-import codecs
-
-from base64_decode_popup.Base64EncodingAnalyzer import Base64EncodingAnalyzer
-from base64_decode_popup.EncodingAnalysis import EncodingAnalysis
-from base64_decode_popup.Base64UrlEncodingAnalyzer import Base64UrlEncodingAnalyzer
 
 class EncodedStringFilter:
+
 
     def __init__(self, \
         min_encoded_string_length_inclusive=1, \
@@ -33,26 +26,3 @@ class EncodedStringFilter:
     def should_evaluate_encoded_string(self, encoded_string):
         return (len(encoded_string) in self.length_range) and \
             (not self.pattern.match(encoded_string))
-
-
-def analyze(encoded_string):
-    """
-    :returns: an EncodingAnalysis representing the supplied string.
-    """
-
-    # if the string is empty, it should be treated as not encoded.
-    if not encoded_string:
-        return EncodingAnalysis(None)
-
-    analyzers = [
-        Base64EncodingAnalyzer(),
-        Base64UrlEncodingAnalyzer()
-    ]
-
-    for analyzer in analyzers:
-        analysis = analyzer.analyze(encoded_string)
-
-        if analysis.has_encoding_details():
-            return analysis
-
-    return EncodingAnalysis(None)

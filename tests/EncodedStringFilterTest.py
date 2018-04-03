@@ -1,6 +1,6 @@
 import unittest
 
-from base64_decode_popup.BaseEncodingUtils import EncodedStringFilter
+from base64_decode_popup.EncodedStringFilter import EncodedStringFilter
 
 class EncodedStringFilterTest(unittest.TestCase):
 
